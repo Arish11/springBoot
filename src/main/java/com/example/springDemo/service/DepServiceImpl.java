@@ -29,4 +29,10 @@ public class DepServiceImpl implements DepService {
 		return repo.findById(id).orElseThrow(()-> new IllegalArgumentException("Invalid id!"));
 	}
 
+	@Override
+	public void delDepByID(Long id) {
+		//Department dep = repo.findById(id).get();
+		repo.deleteById(id);
+	}
+
 }

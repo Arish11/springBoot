@@ -12,4 +12,6 @@ public interface DepService {
 
 	public Department getDepListById(Long id);
 
+	public void delDepByID(Long id);
+
 }
