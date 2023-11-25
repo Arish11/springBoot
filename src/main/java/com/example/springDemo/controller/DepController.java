@@ -14,13 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.springDemo.entity.Department;
 import com.example.springDemo.service.DepService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class DepController {
 	@Autowired
 	private DepService service;
 	
 	@PostMapping("/save")
-	public Department saveDep(@RequestBody Department department) {
+	public Department saveDep(@Valid @RequestBody Department department) {
 		return service.saveDepartment(department);
 	}
 	
